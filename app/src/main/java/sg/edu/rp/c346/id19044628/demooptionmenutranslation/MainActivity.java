@@ -15,6 +15,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        tvTranslatedtext=findViewById(R.id.textViewTranslated);
+        tvTranslatedtext2=findViewById(R.id.textViewTranslated2);
     }
 
     public boolean onCreateOptionsMenu(Menu menu) {
@@ -31,9 +34,11 @@ public class MainActivity extends AppCompatActivity {
 
         if (id == R.id.EnglishSelection) {
             tvTranslatedtext.setText("Hello ");
+            tvTranslatedtext2.setText("Bye");
             return true;
         } else if (id == R.id.italianSelection) {
             tvTranslatedtext.setText("Ciao");
+            tvTranslatedtext2.setText("Addio");
             return true;
         } else {
             tvTranslatedtext.setText("Error translation");
